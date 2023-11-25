@@ -22,6 +22,7 @@ builder.Services.AddDbContext<SchoolContext>(options =>
 var app = builder.Build();
 
 CreateDbIfNotExists(app);
+//ja
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
