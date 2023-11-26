@@ -1,7 +1,7 @@
 # kmetzakmeta
 Developers:
-- Aljaž Travnik
-- Klaudija Jakše
+- Aljaž Travnik 63220337
+- Klaudija Jakše 63220115
 
 Sistem za spletno trgovino in pregled cen v sklopu živinoreje in kmetijske mehanizacije KmetZaKmeta bo uporabnikom nudil objavo oglasa za prodajo živine (posamezne ali masovno) za rejenje, pašo ali zakol. Podrobnosti oglasa bi vključevale starost živali, pasmo, težo, ali je posamezna žival že imela naraščaj in zgodovino storitev, ki so jih živali prejele z strani veterinarskih služb.
 

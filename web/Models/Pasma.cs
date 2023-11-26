@@ -1,0 +1,12 @@
+using System;
+using System.Collections.Generic;
+
+namespace web.Models
+{
+    public class Pasma
+    {
+        public int BreedID { get; set; }
+        
+        public string Name { get; set; } = string.Empty;
+    }
+}
