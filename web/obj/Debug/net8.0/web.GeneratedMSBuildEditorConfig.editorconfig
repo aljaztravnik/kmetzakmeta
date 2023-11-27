@@ -34,12 +34,112 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/KategorijeStrojev/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/KategorijeStrojev/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/KategorijeStrojev/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/KategorijeStrojev/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/KategorijeStrojev/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Regije/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaWplXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Regije/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaWplXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Regije/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaWplXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Regije/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaWplXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Regije/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaWplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Uporabniki/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBvcmFibmlraVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Uporabniki/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBvcmFibmlraVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Uporabniki/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBvcmFibmlraVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Uporabniki/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBvcmFibmlraVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Uporabniki/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBvcmFibmlraVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Znamke/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm5hbWtlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Znamke/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm5hbWtlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Znamke/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm5hbWtlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Znamke/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm5hbWtlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/Znamke/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWm5hbWtlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/_ViewImports.cshtml]

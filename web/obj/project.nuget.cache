@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ADznPgvi/Ti10mn6Uo+2vK9B4ByHRY+As3JYWu46wG6naX+Vutrf+dvebMGm5c3QYvIyiNxaOQPAurDFzc6q5A==",
+  "dgSpecHash": "b344BK87gVOp1ahjWixSpNxi2PgjDPg0iyMqX598T0ywHzSIGkuhIhXhE1dxlOOAfqHJx/Sy9TX399XN62ZkjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\travn\\Desktop\\kmetzakmeta\\web\\web.csproj",
   "expectedPackageFiles": [
@@ -82,6 +82,7 @@
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.0\\microsoft.entityframeworkcore.design.8.0.0.nupkg.sha512",
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.0\\microsoft.entityframeworkcore.relational.8.0.0.nupkg.sha512",
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.0\\microsoft.entityframeworkcore.sqlserver.8.0.0.nupkg.sha512",
+    "C:\\Users\\travn\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.0\\microsoft.entityframeworkcore.tools.8.0.0.nupkg.sha512",
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\travn\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

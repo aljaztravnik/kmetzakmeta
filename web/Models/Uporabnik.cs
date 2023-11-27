@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace web.Models
 {
     public class Uporabnik
     {
+        [Key]
         public int UserID { get; set; }
         
         public string Username { get; set; } = string.Empty;

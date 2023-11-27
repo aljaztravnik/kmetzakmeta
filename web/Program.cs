@@ -1,9 +1,21 @@
+using web.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<KmetContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("KmetContext")));
+            
 var app = builder.Build();
+
+// Seed database using DbInitializer 
+using(var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<KmetContext>();
+    DbInitializer.Initialize(context);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
