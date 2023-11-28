@@ -1,5 +1,13 @@
 using web.Data;
 using Microsoft.EntityFrameworkCore;
+//using web.Migrations;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity;
+using web.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +15,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<KmetContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("KmetContext")));
+
+//builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<KmetContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128).AddEntityFrameworkStores<KmetContext>().AddDefaultUI().AddDefaultTokenProviders();
             
 var app = builder.Build();
 
@@ -29,11 +40,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();

@@ -1,9 +1,10 @@
 using web.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace web.Data
 {
-    public class KmetContext : DbContext
+    public class KmetContext : IdentityDbContext<ApplicationUser>
     {
         public KmetContext(DbContextOptions<KmetContext> options) : base(options)
         {
@@ -21,6 +22,7 @@ namespace web.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Uporabnik>().ToTable("Uporabnik");
             modelBuilder.Entity<Regija>().ToTable("Regija");
             modelBuilder.Entity<Pasma>().ToTable("Pasma");

@@ -251,3 +251,6 @@ C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\runtimes\win\lib\net7.0\
 C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\web.csproj.AssemblyReference.cache
 C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\web.csproj.CopyComplete
+C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\web.MvcApplicationPartsAssemblyInfo.cs
