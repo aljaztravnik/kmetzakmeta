@@ -254,3 +254,4 @@ C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\web.csproj.CopyComplete
 C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\travn\Desktop\kmetzakmeta\web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\travn\Desktop\kmetzakmeta\web\obj\Debug\net8.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css

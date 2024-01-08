@@ -1,3 +1,15 @@
+/* _content/web/Views/Home/Index.cshtml.rz.scp.css */
+.column[b-eai8a5d1aw] {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.row[b-eai8a5d1aw]::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /* _content/web/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
