@@ -54,7 +54,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RegionID,Name")] Regija regija)
+        public async Task<IActionResult> Create([Bind("RegionID,Region")] Regija regija)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("RegionID,Name")] Regija regija)
+        public async Task<IActionResult> Edit(int id, [Bind("RegionID,Region")] Regija regija)
         {
             if (id != regija.RegionID)
             {

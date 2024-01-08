@@ -86,6 +86,46 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F0ZWdvcmlqZVN0cm9qZXZcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzbWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -10,22 +10,22 @@ using web.Models;
 
 namespace web.Controllers
 {
-    public class UporabnikiController : Controller
+    public class OglasiZivineController : Controller
     {
         private readonly KmetContext _context;
 
-        public UporabnikiController(KmetContext context)
+        public OglasiZivineController(KmetContext context)
         {
             _context = context;
         }
 
-        // GET: Uporabniki
+        // GET: OglasiZivine
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Uporabniki.ToListAsync());
+            return View(await _context.OglasiZivine.ToListAsync());
         }
 
-        // GET: Uporabniki/Details/5
+        // GET: OglasiZivine/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace web.Controllers
                 return NotFound();
             }
 
-            var uporabnik = await _context.Uporabniki
-                .FirstOrDefaultAsync(m => m.UserID == id);
-            if (uporabnik == null)
+            var oglasZivina = await _context.OglasiZivine
+                .FirstOrDefaultAsync(m => m.ZivinaOglasID == id);
+            if (oglasZivina == null)
             {
                 return NotFound();
             }
 
-            return View(uporabnik);
+            return View(oglasZivina);
         }
 
-        // GET: Uporabniki/Create
+        // GET: OglasiZivine/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Uporabniki/Create
+        // POST: OglasiZivine/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserID,User,Password,Phone,Email,Address,Description")] Uporabnik uporabnik)
+        public async Task<IActionResult> Create([Bind("ZivinaOglasID,Title,Price,Age,Weight,Sex,Desc,Offspring,Construction")] OglasZivina oglasZivina)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(uporabnik);
+                _context.Add(oglasZivina);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(uporabnik);
+            return View(oglasZivina);
         }
 
-        // GET: Uporabniki/Edit/5
+        // GET: OglasiZivine/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace web.Controllers
                 return NotFound();
             }
 
-            var uporabnik = await _context.Uporabniki.FindAsync(id);
-            if (uporabnik == null)
+            var oglasZivina = await _context.OglasiZivine.FindAsync(id);
+            if (oglasZivina == null)
             {
                 return NotFound();
             }
-            return View(uporabnik);
+            return View(oglasZivina);
         }
 
-        // POST: Uporabniki/Edit/5
+        // POST: OglasiZivine/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserID,User,Password,Phone,Email,Address,Description")] Uporabnik uporabnik)
+        public async Task<IActionResult> Edit(int id, [Bind("ZivinaOglasID,Title,Price,Age,Weight,Sex,Desc,Offspring,Construction")] OglasZivina oglasZivina)
         {
-            if (id != uporabnik.UserID)
+            if (id != oglasZivina.ZivinaOglasID)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace web.Controllers
             {
                 try
                 {
-                    _context.Update(uporabnik);
+                    _context.Update(oglasZivina);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UporabnikExists(uporabnik.UserID))
+                    if (!OglasZivinaExists(oglasZivina.ZivinaOglasID))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(uporabnik);
+            return View(oglasZivina);
         }
 
-        // GET: Uporabniki/Delete/5
+        // GET: OglasiZivine/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,34 +124,34 @@ namespace web.Controllers
                 return NotFound();
             }
 
-            var uporabnik = await _context.Uporabniki
-                .FirstOrDefaultAsync(m => m.UserID == id);
-            if (uporabnik == null)
+            var oglasZivina = await _context.OglasiZivine
+                .FirstOrDefaultAsync(m => m.ZivinaOglasID == id);
+            if (oglasZivina == null)
             {
                 return NotFound();
             }
 
-            return View(uporabnik);
+            return View(oglasZivina);
         }
 
-        // POST: Uporabniki/Delete/5
+        // POST: OglasiZivine/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var uporabnik = await _context.Uporabniki.FindAsync(id);
-            if (uporabnik != null)
+            var oglasZivina = await _context.OglasiZivine.FindAsync(id);
+            if (oglasZivina != null)
             {
-                _context.Uporabniki.Remove(uporabnik);
+                _context.OglasiZivine.Remove(oglasZivina);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UporabnikExists(int id)
+        private bool OglasZivinaExists(int id)
         {
-            return _context.Uporabniki.Any(e => e.UserID == id);
+            return _context.OglasiZivine.Any(e => e.ZivinaOglasID == id);
         }
     }
 }

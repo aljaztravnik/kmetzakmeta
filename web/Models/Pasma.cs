@@ -9,6 +9,6 @@ namespace web.Models
         [Key]
         public int BreedID { get; set; }
         
-        public string Name { get; set; } = string.Empty;
+        public string Breed { get; set; } = string.Empty;
     }
 }

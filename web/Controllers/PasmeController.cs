@@ -54,7 +54,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BreedID,Name")] Pasma pasma)
+        public async Task<IActionResult> Create([Bind("BreedID,Breed")] Pasma pasma)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BreedID,Name")] Pasma pasma)
+        public async Task<IActionResult> Edit(int id, [Bind("BreedID,Breed")] Pasma pasma)
         {
             if (id != pasma.BreedID)
             {

@@ -20,6 +20,10 @@ namespace web.Data
 
         public DbSet<KategorijaStroja> KategorijeStrojev { get; set; }
 
+        public DbSet<OglasStroj> OglasiStrojev { get; set; }
+
+        public DbSet<OglasZivina> OglasiZivine { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,6 +32,8 @@ namespace web.Data
             modelBuilder.Entity<Pasma>().ToTable("Pasma");
             modelBuilder.Entity<Znamka>().ToTable("Znamka");
             modelBuilder.Entity<KategorijaStroja>().ToTable("KategorijaStroja");
+            modelBuilder.Entity<OglasStroj>().ToTable("OglasStroj");
+            modelBuilder.Entity<OglasZivina>().ToTable("OglasZivina");
         }
     }
 }

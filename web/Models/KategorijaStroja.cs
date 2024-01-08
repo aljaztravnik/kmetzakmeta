@@ -11,6 +11,6 @@ namespace web.Models
         public int MachineTypeID { get; set; }
 
         
-        public string Name { get; set; } = string.Empty;
+        public string MachineType { get; set; } = string.Empty;
     }
 }

@@ -19,14 +19,14 @@ namespace web.Data
 
             var uporabniki = new Uporabnik[]
             {
-                new Uporabnik{Username="aljaz",Password="testgeslo"},
-                new Uporabnik{Username="klaudija",Password="testgeslo"},
-                new Uporabnik{Username="gregor",Password="testgeslo"},
-                new Uporabnik{Username="janez",Password="testgeslo"},
-                new Uporabnik{Username="gasper",Password="testgeslo"},
-                new Uporabnik{Username="domen",Password="testgeslo"},
-                new Uporabnik{Username="jan",Password="testgeslo"},
-                new Uporabnik{Username="joco",Password="testgeslo"}
+                new Uporabnik{User="aljaz",Password="testgeslo"},
+                new Uporabnik{User="klaudija",Password="testgeslo"},
+                new Uporabnik{User="gregor",Password="testgeslo"},
+                new Uporabnik{User="janez",Password="testgeslo"},
+                new Uporabnik{User="gasper",Password="testgeslo"},
+                new Uporabnik{User="domen",Password="testgeslo"},
+                new Uporabnik{User="jan",Password="testgeslo"},
+                new Uporabnik{User="joco",Password="testgeslo"}
             };
 
             context.Uporabniki.AddRange(uporabniki);
@@ -34,18 +34,18 @@ namespace web.Data
 
             var regije = new Regija[]
             {
-                new Regija{Name="Osrednjeslovenska"},
-                new Regija{Name="Pomurska"},
-                new Regija{Name="Podravska"},
-                new Regija{Name="Koroška"},
-                new Regija{Name="Savinjska"},
-                new Regija{Name="Zasavska"},
-                new Regija{Name="Posavska"},
-                new Regija{Name="Jugovzhodna Slovenija"},
-                new Regija{Name="Gorenjska"},
-                new Regija{Name="Primorsko-notranjska"},
-                new Regija{Name="Goriška"},
-                new Regija{Name="Obalno-kraška"},
+                new Regija{Region="Osrednjeslovenska"},
+                new Regija{Region="Pomurska"},
+                new Regija{Region="Podravska"},
+                new Regija{Region="Koroška"},
+                new Regija{Region="Savinjska"},
+                new Regija{Region="Zasavska"},
+                new Regija{Region="Posavska"},
+                new Regija{Region="Jugovzhodna Slovenija"},
+                new Regija{Region="Gorenjska"},
+                new Regija{Region="Primorsko-notranjska"},
+                new Regija{Region="Goriška"},
+                new Regija{Region="Obalno-kraška"},
             };
 
             context.Regije.AddRange(regije);
@@ -53,12 +53,12 @@ namespace web.Data
 
             var pasme = new Pasma[]
             {
-                new Pasma{Name="Črno-belo govedo"},
-                new Pasma{Name="Limuzin (Limousin) govedo"},
-                new Pasma{Name="Lisasto govedo"},
-                new Pasma{Name="Montbeliard govedo"},
-                new Pasma{Name="Rjavo govedo"},
-                new Pasma{Name="Šarole (Charolais) govedo"},
+                new Pasma{Breed="Črno-belo govedo"},
+                new Pasma{Breed="Limuzin (Limousin) govedo"},
+                new Pasma{Breed="Lisasto govedo"},
+                new Pasma{Breed="Montbeliard govedo"},
+                new Pasma{Breed="Rjavo govedo"},
+                new Pasma{Breed="Šarole (Charolais) govedo"},
             };
 
             context.Pasme.AddRange(pasme);
@@ -66,31 +66,31 @@ namespace web.Data
 
             var znamke = new Znamka[]
             {
-                new Znamka{Name="Fendt"},
-                new Znamka{Name="Massey Ferguson"},
-                new Znamka{Name="Valtra"},
-                new Znamka{Name="Fiat Trattori"},
-                new Znamka{Name="Landini"},
-                new Znamka{Name="McCormick Tractors"},
-                new Znamka{Name="Case"},
-                new Znamka{Name="Case IH"},
-                new Znamka{Name="Caterpillar"},
-                new Znamka{Name="Claas"},
-                new Znamka{Name="New Holland"},
-                new Znamka{Name="Steyr"},
-                new Znamka{Name="John Deere"},
-                new Znamka{Name="Deutz-Fahr"},
-                new Znamka{Name="Goldoni"},
-                new Znamka{Name="JCB"},
-                new Znamka{Name="Kubota"},
-                new Znamka{Name="Komatsu"},
-                new Znamka{Name="Lamborghini"},
-                new Znamka{Name="Landini"},
-                new Znamka{Name="Lindner"},
-                new Znamka{Name="Ursus"},
-                new Znamka{Name="SAME"},
-                new Znamka{Name="IMT"},
-                new Znamka{Name="Zetor"},
+                new Znamka{Brand="Fendt"},
+                new Znamka{Brand="Massey Ferguson"},
+                new Znamka{Brand="Valtra"},
+                new Znamka{Brand="Fiat Trattori"},
+                new Znamka{Brand="Landini"},
+                new Znamka{Brand="McCormick Tractors"},
+                new Znamka{Brand="Case"},
+                new Znamka{Brand="Case IH"},
+                new Znamka{Brand="Caterpillar"},
+                new Znamka{Brand="Claas"},
+                new Znamka{Brand="New Holland"},
+                new Znamka{Brand="Steyr"},
+                new Znamka{Brand="John Deere"},
+                new Znamka{Brand="Deutz-Fahr"},
+                new Znamka{Brand="Goldoni"},
+                new Znamka{Brand="JCB"},
+                new Znamka{Brand="Kubota"},
+                new Znamka{Brand="Komatsu"},
+                new Znamka{Brand="Lamborghini"},
+                new Znamka{Brand="Landini"},
+                new Znamka{Brand="Lindner"},
+                new Znamka{Brand="Ursus"},
+                new Znamka{Brand="SAME"},
+                new Znamka{Brand="IMT"},
+                new Znamka{Brand="Zetor"},
             };
 
             context.Znamke.AddRange(znamke);
@@ -98,12 +98,12 @@ namespace web.Data
 
             var kategorijeStrojev = new KategorijaStroja[]
             {
-                new KategorijaStroja{Name="Traktor"},
-                new KategorijaStroja{Name="Zgrabljalnik"},
-                new KategorijaStroja{Name="Trosilec"},
-                new KategorijaStroja{Name="Cisterna"},
-                new KategorijaStroja{Name="Nakladač"},
-                new KategorijaStroja{Name="Balirka"},
+                new KategorijaStroja{MachineType="Traktor"},
+                new KategorijaStroja{MachineType="Zgrabljalnik"},
+                new KategorijaStroja{MachineType="Trosilec"},
+                new KategorijaStroja{MachineType="Cisterna"},
+                new KategorijaStroja{MachineType="Nakladač"},
+                new KategorijaStroja{MachineType="Balirka"},
             };
 
             context.KategorijeStrojev.AddRange(kategorijeStrojev);

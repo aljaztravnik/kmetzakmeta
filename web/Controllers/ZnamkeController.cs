@@ -54,7 +54,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BrandID,Name")] Znamka znamka)
+        public async Task<IActionResult> Create([Bind("BrandID,Brand")] Znamka znamka)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BrandID,Name")] Znamka znamka)
+        public async Task<IActionResult> Edit(int id, [Bind("BrandID,Brand")] Znamka znamka)
         {
             if (id != znamka.BrandID)
             {

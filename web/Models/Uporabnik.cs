@@ -9,7 +9,7 @@ namespace web.Models
         [Key]
         public int UserID { get; set; }
         
-        public string Username { get; set; } = string.Empty;
+        public string User { get; set; } = string.Empty;
 
         public string Password { get; set; } = string.Empty;
 
