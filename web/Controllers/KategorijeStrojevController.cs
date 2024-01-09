@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using web.Data;
 using web.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 
 namespace web.Controllers
 {
@@ -26,6 +28,7 @@ namespace web.Controllers
         }
 
         // GET: KategorijeStrojev/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,6 +47,7 @@ namespace web.Controllers
         }
 
         // GET: KategorijeStrojev/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +58,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("MachineTypeID,MachineType")] KategorijaStroja kategorijaStroja)
         {
             if (ModelState.IsValid)
@@ -66,6 +71,7 @@ namespace web.Controllers
         }
 
         // GET: KategorijeStrojev/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,6 +92,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("MachineTypeID,MachineType")] KategorijaStroja kategorijaStroja)
         {
             if (id != kategorijaStroja.MachineTypeID)
@@ -117,6 +124,7 @@ namespace web.Controllers
         }
 
         // GET: KategorijeStrojev/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +145,7 @@ namespace web.Controllers
         // POST: KategorijeStrojev/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var kategorijaStroja = await _context.KategorijeStrojev.FindAsync(id);

@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using web.Data;
 using web.Models;
+
 
 namespace web.Controllers
 {
@@ -44,6 +46,7 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -54,6 +57,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("StrojOglasID,Title,Price,Age,WorkingHours,Power,Desc")] OglasStroj oglasStroj)
         {
             if (ModelState.IsValid)
@@ -66,6 +70,7 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,6 +91,7 @@ namespace web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("StrojOglasID,Title,Price,Age,WorkingHours,Power,Desc")] OglasStroj oglasStroj)
         {
             if (id != oglasStroj.StrojOglasID)
@@ -117,6 +123,7 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +144,7 @@ namespace web.Controllers
         // POST: OglasiStrojev/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var oglasStroj = await _context.OglasiStrojev.FindAsync(id);
