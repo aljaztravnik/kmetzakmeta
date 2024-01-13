@@ -22,7 +22,7 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index() // sortiranje - v view se vrne vrsta sortiranja in tuki seznam uredis
         {
             return View(await _context.OglasiStrojev.ToListAsync());
         }

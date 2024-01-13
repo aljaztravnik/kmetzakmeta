@@ -1,15 +1,16 @@
 @model IEnumerable<web.Models.OglasStroj>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "KmetZaKmeta";
 }
 
-<h1>Index</h1>
+<h1>Izberite kriterije</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Ustvari nov oglas</a>
 </p>
 <table class="table">
+    <!--
     <thead>
         <tr>
             <th>
@@ -33,8 +34,21 @@
             <th></th>
         </tr>
     </thead>
+    -->
     <tbody>
 @foreach (var item in Model) {
+        <a asp-action="Details" asp-route-id="@item.StrojOglasID">
+            <div class="car-listing">
+                <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
+                <div class="car-details">
+                    <div class="car-title">@Html.DisplayFor(modelItem => item.Title)</div>
+                    <div class="car-info">Delovne ure: @Html.DisplayFor(modelItem => item.WorkingHours)</div>
+                    <div class="car-info">Letnik: @Html.DisplayFor(modelItem => item.Age)</div>
+                    <div class="car-price">Cena: @Html.DisplayFor(modelItem => item.Price)€</div>
+                </div>
+            </div>
+        </a>
+        <!--
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
@@ -60,6 +74,7 @@
                 <a asp-action="Delete" asp-route-id="@item.StrojOglasID">Delete</a>
             </td>
         </tr>
+        -->
 }
     </tbody>
 </table>

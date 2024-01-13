@@ -90,16 +90,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Create.cshtml]
@@ -110,16 +102,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Pasme/Create.cshtml]
@@ -225,6 +209,22 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-eai8a5d1aw
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-rwnbj8qpz5
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiStrojev/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpU3Ryb2pldlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-gl9y8rihfs
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ryor0qw1gx
+
+[C:/Users/travn/Desktop/kmetzakmeta/web/Views/OglasiZivine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dsYXNpWml2aW5lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-jvwkmuehyh
 
 [C:/Users/travn/Desktop/kmetzakmeta/web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
