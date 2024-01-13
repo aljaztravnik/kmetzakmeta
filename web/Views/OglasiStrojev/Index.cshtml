@@ -5,36 +5,47 @@
 }
 
 <h1>Izberite kriterije</h1>
+<div class="filter-container">
+    <form asp-action="Index" method="get">
+        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
+        <select name="make" class="filter-dropdown">
+            <option value="Fendt">Fendt</option>
+            <option value="Massey Ferguson">Massey Ferguson</option>
+            <option value="Valtra">Valtra</option>
+            <option value="Fiat Trattori">Fiat Trattori</option>
+            <option value="Landini">Landini</option>
+            <option value="McCormick Tractors">McCormick Tractors</option>
+            <option value="Case">Case</option>
+            <option value="Case IH">Case IH</option>
+            <option value="Caterpillar">Caterpillar</option>
+            <option value="Claas">Class</option>
+            <option value="New Holland">New Holland</option>
+            <option value="Steyr">Steyr</option>
+            <option value="John Deere">John Deere</option>
+            <option value="Deutz-Fahr">Deutz-Fahr</option>
+            <option value="Goldoni">Goldoni</option>
+            <option value="JCB">JCB</option>
+            <option value="Kubota">Kubota</option>
+            <option value="Komatsu">Komatsu</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Landini">Landini</option>
+            <option value="Lindner">Lindner</option>
+            <option value="Ursus">Ursus</option>
+            <option value="SAME">Same</option>
+            <option value="IMT">IMT</option>
+            <option value="Zetor">Zetor</option>
+        </select>
+        
+        <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
+        <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
 
+        <input type="submit" value="submit" class="filter-button"/>
+    </form>
+</div>
 <p>
     <a asp-action="Create">Ustvari nov oglas</a>
 </p>
 <table class="table">
-    <!--
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Age)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.WorkingHours)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Power)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desc)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    -->
     <tbody>
 @foreach (var item in Model) {
         <a asp-action="Details" asp-route-id="@item.StrojOglasID">
@@ -48,33 +59,6 @@
                 </div>
             </div>
         </a>
-        <!--
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WorkingHours)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Power)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Desc)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.StrojOglasID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.StrojOglasID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.StrojOglasID">Delete</a>
-            </td>
-        </tr>
-        -->
 }
     </tbody>
 </table>

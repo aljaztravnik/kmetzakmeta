@@ -2,6 +2,35 @@ a[b-jvwkmuehyh]{
     text-decoration: none;
 }
 
+.filter-container[b-jvwkmuehyh] {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form[b-jvwkmuehyh] {
+  padding: 20px;
+}
+
+.filter-input[b-jvwkmuehyh] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-button[b-jvwkmuehyh] {
+  background-color: #e44d26;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .car-listing[b-jvwkmuehyh] {
     max-width: 600px;
     margin: 20px auto;

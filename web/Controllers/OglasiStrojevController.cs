@@ -22,8 +22,19 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev
-        public async Task<IActionResult> Index() // sortiranje - v view se vrne vrsta sortiranja in tuki seznam uredis
+        public async Task<IActionResult> Index(String currentFilter, string searchString, int? pageNumber)
         {
+            if (searchString != null) pageNumber = 1;
+            else searchString = currentFilter;
+
+            ViewData["CurrentFilter"] = searchString;
+            var oglasi = from s in _context.OglasiStrojev select s;
+            if (!String.IsNullOrEmpty(searchString))
+                oglasi = oglasi.Where(s => s.Title.Contains(searchString));
+
+
+            int pageSize = 3;
+            //return View(await PaginatedList<OglasStroj>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
             return View(await _context.OglasiStrojev.ToListAsync());
         }
 
