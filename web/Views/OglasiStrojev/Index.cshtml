@@ -1,46 +1,54 @@
-@model IEnumerable<web.Models.OglasStroj>
+@model PaginatedList<web.Models.OglasStroj>
 
 @{
     ViewData["Title"] = "KmetZaKmeta";
 }
 
 <h1>Izberite kriterije</h1>
-<div class="filter-container">
-    <form asp-action="Index" method="get">
-        <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
-        <select name="make" class="filter-dropdown">
-            <option value="Fendt">Fendt</option>
-            <option value="Massey Ferguson">Massey Ferguson</option>
-            <option value="Valtra">Valtra</option>
-            <option value="Fiat Trattori">Fiat Trattori</option>
-            <option value="Landini">Landini</option>
-            <option value="McCormick Tractors">McCormick Tractors</option>
-            <option value="Case">Case</option>
-            <option value="Case IH">Case IH</option>
-            <option value="Caterpillar">Caterpillar</option>
-            <option value="Claas">Class</option>
-            <option value="New Holland">New Holland</option>
-            <option value="Steyr">Steyr</option>
-            <option value="John Deere">John Deere</option>
-            <option value="Deutz-Fahr">Deutz-Fahr</option>
-            <option value="Goldoni">Goldoni</option>
-            <option value="JCB">JCB</option>
-            <option value="Kubota">Kubota</option>
-            <option value="Komatsu">Komatsu</option>
-            <option value="Lamborghini">Lamborghini</option>
-            <option value="Landini">Landini</option>
-            <option value="Lindner">Lindner</option>
-            <option value="Ursus">Ursus</option>
-            <option value="SAME">Same</option>
-            <option value="IMT">IMT</option>
-            <option value="Zetor">Zetor</option>
-        </select>
-        
-        <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
-        <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
+<div class="flex-container">
+    <div class="flex-child">
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cena padajoče</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cena naraščajoče</a>
+    </div>
+    <div class="flex-child">
+        <div class="filter-container">
+            <form asp-action="Index" method="get">
+                <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
+                <select name="make" class="filter-dropdown">
+                    <option value="Fendt">Fendt</option>
+                    <option value="Massey Ferguson">Massey Ferguson</option>
+                    <option value="Valtra">Valtra</option>
+                    <option value="Fiat Trattori">Fiat Trattori</option>
+                    <option value="Landini">Landini</option>
+                    <option value="McCormick Tractors">McCormick Tractors</option>
+                    <option value="Case">Case</option>
+                    <option value="Case IH">Case IH</option>
+                    <option value="Caterpillar">Caterpillar</option>
+                    <option value="Claas">Class</option>
+                    <option value="New Holland">New Holland</option>
+                    <option value="Steyr">Steyr</option>
+                    <option value="John Deere">John Deere</option>
+                    <option value="Deutz-Fahr">Deutz-Fahr</option>
+                    <option value="Goldoni">Goldoni</option>
+                    <option value="JCB">JCB</option>
+                    <option value="Kubota">Kubota</option>
+                    <option value="Komatsu">Komatsu</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Landini">Landini</option>
+                    <option value="Lindner">Lindner</option>
+                    <option value="Ursus">Ursus</option>
+                    <option value="SAME">Same</option>
+                    <option value="IMT">IMT</option>
+                    <option value="Zetor">Zetor</option>
+                </select>
 
-        <input type="submit" value="submit" class="filter-button"/>
-    </form>
+                <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
+                <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
+
+                <input type="submit" value="submit" class="filter-button"/>
+            </form>
+        </div>
+    </div>
 </div>
 <p>
     <a asp-action="Create">Ustvari nov oglas</a>
@@ -62,3 +70,23 @@
 }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Naprej
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Nazaj
+</a>

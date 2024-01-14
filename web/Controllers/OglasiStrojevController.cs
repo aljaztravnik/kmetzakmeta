@@ -22,8 +22,11 @@ namespace web.Controllers
         }
 
         // GET: OglasiStrojev
-        public async Task<IActionResult> Index(String currentFilter, string searchString, int? pageNumber)
+        public async Task<IActionResult> Index(string sortOrder, String currentFilter, string searchString, int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
+            //ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
             if (searchString != null) pageNumber = 1;
             else searchString = currentFilter;
 
@@ -32,10 +35,18 @@ namespace web.Controllers
             if (!String.IsNullOrEmpty(searchString))
                 oglasi = oglasi.Where(s => s.Title.Contains(searchString));
 
+            switch(sortOrder){
+                case "price_desc":
+                    oglasi = oglasi.OrderByDescending(s => s.Price);
+                    break;
+                default:
+                    oglasi = oglasi.OrderBy(s => s.Price);
+                    break;
+            }
 
             int pageSize = 3;
-            //return View(await PaginatedList<OglasStroj>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
-            return View(await _context.OglasiStrojev.ToListAsync());
+            return View(await PaginatedList<OglasStroj>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
+            //return View(await _context.OglasiStrojev.ToListAsync());
         }
 
         // GET: OglasiStrojev/Details/5
