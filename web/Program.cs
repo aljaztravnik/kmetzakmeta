@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<KmetContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("KmetContext")));
+            options.UseSqlServer(builder.Configuration.GetConnectionString("AzureContext")));
 
 //builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<KmetContext>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128).AddEntityFrameworkStores<KmetContext>().AddDefaultUI().AddDefaultTokenProviders();
