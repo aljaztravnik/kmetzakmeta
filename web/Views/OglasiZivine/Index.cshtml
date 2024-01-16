@@ -14,7 +14,16 @@
         <div class="filter-container">
             <form asp-action="Index" method="get">
                 <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
-                <select name="make" class="filter-dropdown">
+                <!-- TUKAJ JE LAHKO ŠE FILTRIRANJE PO:
+                        - letnici
+                        - teži
+                        - pasma (ampak je že search)
+                        - spol
+                        - regija
+                        - naraščaj
+                -->
+                <!--
+                <select name="Make" class="filter-dropdown">
                     <option value="Črno-belo govedo">Črno-belo govedo</option>
                     <option value="Limuzin (Limousin) govedo">Limuzin (Limousin) govedo</option>
                     <option value="Lisasto govedo">Lisasto govedo</option>
@@ -22,9 +31,9 @@
                     <option value="Rjavo govedo">Rjavo govedo</option>
                     <option value="Šarole (Charolais) govedo">Šarole (Charolais) govedo</option>
                 </select>
-
-                <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
-                <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
+                -->
+                <input type="number" name="MinPrice" value="@ViewData["CurrentMinPrice"]" class="filter-input" placeholder="Minimum cena [€]">
+                <input type="number" name="MaxPrice" value="@ViewData["CurrentMaxPrice"]" class="filter-input" placeholder="Maksimum cena [€]">
 
                 <input type="submit" value="Uporabi filtre" class="filter-button"/>
             </form>

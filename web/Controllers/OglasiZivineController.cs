@@ -21,19 +21,37 @@ namespace web.Controllers
         }
 
         // GET: OglasiZivine
-        public async Task<IActionResult> Index(string sortOrder, String currentFilter, string searchString, int? pageNumber)
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int currentMaxPrice, int currentMinPrice, int? pageNumber, int maxPrice = 0, int minPrice = 0)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
-            //ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
             if (searchString != null) pageNumber = 1;
             else searchString = currentFilter;
+
+            if(maxPrice > 0 && minPrice > 0 && maxPrice > minPrice){
+                pageNumber = 1;
+                ViewData["CurrentMaxPrice"] = maxPrice;
+                ViewData["CurrentMinPrice"] = minPrice;
+            }else if(maxPrice > 0 && minPrice == 0){
+                pageNumber = 1;
+                ViewData["CurrentMaxPrice"] = maxPrice;
+            }else if(minPrice > 0 && maxPrice == 0){
+                pageNumber = 1;
+                ViewData["CurrentMinPrice"] = minPrice;
+            }
 
             ViewData["CurrentFilter"] = searchString;
             var oglasi = from s in _context.OglasiZivine select s;
             if (!String.IsNullOrEmpty(searchString))
                 oglasi = oglasi.Where(s => s.Title.Contains(searchString));
-
+            
+            if(maxPrice > 0 && minPrice > 0 && maxPrice > minPrice)
+                oglasi = oglasi.Where(s => s.Price <= maxPrice && s.Price >= minPrice);
+            else if(maxPrice > 0 && minPrice == 0)
+                oglasi = oglasi.Where(s => s.Price <= maxPrice);
+            else if(minPrice > 0 && maxPrice == 0)
+                oglasi = oglasi.Where(s => s.Price >= minPrice);
+            
             switch(sortOrder){
                 case "price_desc":
                     oglasi = oglasi.OrderByDescending(s => s.Price);
@@ -45,7 +63,6 @@ namespace web.Controllers
 
             int pageSize = 10;
             return View(await PaginatedList<OglasZivina>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
-            //return View(await _context.OglasiZivine.ToListAsync());
         }
 
         // GET: OglasiZivine/Details/5

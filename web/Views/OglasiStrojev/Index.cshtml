@@ -14,36 +14,21 @@
         <div class="filter-container">
             <form asp-action="Index" method="get">
                 <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
-                <select name="make" class="filter-dropdown">
+                <!-- TUKAJ JE LAHKO ŠE FILTRIRANJE PO:
+                        - letnici
+                        - delovne ure
+                        - znamka (ampak je že search)
+                        - moč
+                        - regija
+                -->
+                <!--
+                <select name="Make" class="filter-dropdown">
+                    <option value="@ViewData["CurrentMake"]">Fendt</option>
                     <option value="Fendt">Fendt</option>
-                    <option value="Massey Ferguson">Massey Ferguson</option>
-                    <option value="Valtra">Valtra</option>
-                    <option value="Fiat Trattori">Fiat Trattori</option>
-                    <option value="Landini">Landini</option>
-                    <option value="McCormick Tractors">McCormick Tractors</option>
-                    <option value="Case">Case</option>
-                    <option value="Case IH">Case IH</option>
-                    <option value="Caterpillar">Caterpillar</option>
-                    <option value="Claas">Class</option>
-                    <option value="New Holland">New Holland</option>
-                    <option value="Steyr">Steyr</option>
-                    <option value="John Deere">John Deere</option>
-                    <option value="Deutz-Fahr">Deutz-Fahr</option>
-                    <option value="Goldoni">Goldoni</option>
-                    <option value="JCB">JCB</option>
-                    <option value="Kubota">Kubota</option>
-                    <option value="Komatsu">Komatsu</option>
-                    <option value="Lamborghini">Lamborghini</option>
-                    <option value="Landini">Landini</option>
-                    <option value="Lindner">Lindner</option>
-                    <option value="Ursus">Ursus</option>
-                    <option value="SAME">Same</option>
-                    <option value="IMT">IMT</option>
-                    <option value="Zetor">Zetor</option>
                 </select>
-
-                <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
-                <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
+                -->
+                <input type="number" name="MinPrice" value="@ViewData["CurrentMinPrice"]" class="filter-input" placeholder="Minimum cena [€]">
+                <input type="number" name="MaxPrice" value="@ViewData["CurrentMaxPrice"]" class="filter-input" placeholder="Maksimum cena [€]">
 
                 <input type="submit" value="Uporabi filtre" class="filter-button"/>
             </form>
