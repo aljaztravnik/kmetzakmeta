@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using web.Data;
 using web.Models;
+using web.Filters;
 
 namespace web.Controllers_Api
 {
     [Route("api/v1/Pasma")]
     [ApiController]
+    [ApiKeyAuth]
     public class PasmeApiController : ControllerBase
     {
         private readonly KmetContext _context;
