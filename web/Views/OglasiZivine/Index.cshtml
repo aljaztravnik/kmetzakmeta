@@ -1,92 +1,73 @@
-@model IEnumerable<web.Models.OglasZivina>
+@model PaginatedList<web.Models.OglasZivina>
 
 @{
     ViewData["Title"] = "KmetZaKmeta";
 }
 
 <h1>Izberite kriterije</h1>
+<div class="flex-container">
+    <div class="flex-child">
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cena padajoče</a>
+        <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cena naraščajoče</a>
+    </div>
+    <div class="flex-child">
+        <div class="filter-container">
+            <form asp-action="Index" method="get">
+                <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" placeholder="Išči po imenu" class="filter-input"/>
+                <select name="make" class="filter-dropdown">
+                    <option value="Črno-belo govedo">Črno-belo govedo</option>
+                    <option value="Limuzin (Limousin) govedo">Limuzin (Limousin) govedo</option>
+                    <option value="Lisasto govedo">Lisasto govedo</option>
+                    <option value="Montbeliard govedo">Montbeliard govedo</option>
+                    <option value="Rjavo govedo">Rjavo govedo</option>
+                    <option value="Šarole (Charolais) govedo">Šarole (Charolais) govedo</option>
+                </select>
 
+                <input type="number" name="minPrice" class="filter-input" placeholder="Minimum cena">
+                <input type="number" name="maxPrice" class="filter-input" placeholder="Maksimum cena">
+
+                <input type="submit" value="Uporabi filtre" class="filter-button"/>
+            </form>
+        </div>
+    </div>
+</div>
 <p>
     <a asp-action="Create">Ustvari nov oglas</a>
 </p>
 <table class="table">
-    <!--
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Age)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Weight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sex)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Offspring)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Construction)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    -->
     <tbody>
-@foreach (var item in Model) {
-        <a asp-action="Details" asp-route-id="@item.ZivinaOglasID">
-            <div class="car-listing">
-                <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
-                <div class="car-details">
-                    <div class="car-title">@Html.DisplayFor(modelItem => item.Title)</div>
-                    <div class="car-info">Starost: @Html.DisplayFor(modelItem => item.Age)</div>
-                    <div class="car-info">Spol: @Html.DisplayFor(modelItem => item.Sex)</div>
-                    <div class="car-price">Cena: @Html.DisplayFor(modelItem => item.Price)€</div>
+        @foreach (var item in Model) {
+            <a asp-action="Details" asp-route-id="@item.ZivinaOglasID">
+                <div class="car-listing">
+                    <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
+                    <div class="car-details">
+                        <div class="car-title">@Html.DisplayFor(modelItem => item.Title)</div>
+                        <div class="car-info">Starost: @Html.DisplayFor(modelItem => item.Age)</div>
+                        <div class="car-info">Spol: @Html.DisplayFor(modelItem => item.Sex)</div>
+                        <div class="car-price">Cena: @Html.DisplayFor(modelItem => item.Price)€</div>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <!--
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sex)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Desc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Offspring)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Construction)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ZivinaOglasID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ZivinaOglasID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ZivinaOglasID">Delete</a>
-            </td>
-        </tr>
-        -->
-}
+            </a>
+        }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Naprej
+</a>
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Nazaj
+</a>

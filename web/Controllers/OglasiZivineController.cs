@@ -21,9 +21,31 @@ namespace web.Controllers
         }
 
         // GET: OglasiZivine
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, String currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.OglasiZivine.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
+            //ViewData["PriceSortParam"] = String.IsNullOrEmpty(sortOrder) ? "price_desc" : "";
+            if (searchString != null) pageNumber = 1;
+            else searchString = currentFilter;
+
+            ViewData["CurrentFilter"] = searchString;
+            var oglasi = from s in _context.OglasiZivine select s;
+            if (!String.IsNullOrEmpty(searchString))
+                oglasi = oglasi.Where(s => s.Title.Contains(searchString));
+
+            switch(sortOrder){
+                case "price_desc":
+                    oglasi = oglasi.OrderByDescending(s => s.Price);
+                    break;
+                default:
+                    oglasi = oglasi.OrderBy(s => s.Price);
+                    break;
+            }
+
+            int pageSize = 10;
+            return View(await PaginatedList<OglasZivina>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
+            //return View(await _context.OglasiZivine.ToListAsync());
         }
 
         // GET: OglasiZivine/Details/5

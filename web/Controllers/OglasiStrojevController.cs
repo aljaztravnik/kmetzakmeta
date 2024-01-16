@@ -44,7 +44,7 @@ namespace web.Controllers
                     break;
             }
 
-            int pageSize = 3;
+            int pageSize = 10;
             return View(await PaginatedList<OglasStroj>.CreateAsync(oglasi.AsNoTracking(), pageNumber ?? 1, pageSize));
             //return View(await _context.OglasiStrojev.ToListAsync());
         }
