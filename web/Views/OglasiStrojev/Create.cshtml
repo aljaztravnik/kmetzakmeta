@@ -11,37 +11,37 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
+                <label asp-for="Title" class="control-label">Naslov oglasa</label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
+                <label asp-for="Age" class="control-label">Letnik</label>
                 <input asp-for="Age" class="form-control" />
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="WorkingHours" class="control-label"></label>
+                <label asp-for="WorkingHours" class="control-label">Št. delovnih ur</label>
                 <input asp-for="WorkingHours" class="form-control" />
                 <span asp-validation-for="WorkingHours" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Power" class="control-label"></label>
+                <label asp-for="Power" class="control-label">Moč [kW]</label>
                 <input asp-for="Power" class="form-control" />
                 <span asp-validation-for="Power" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Desc" class="control-label"></label>
+                <label asp-for="Desc" class="control-label">Opis</label>
                 <input asp-for="Desc" class="form-control" />
                 <span asp-validation-for="Desc" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="Price" class="control-label">Cena [€]</label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ustvari" class="btn btn-primary" />
             </div>
         </form>
     </div>
