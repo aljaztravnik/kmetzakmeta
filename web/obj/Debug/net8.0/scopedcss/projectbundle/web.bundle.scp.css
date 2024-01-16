@@ -12,53 +12,46 @@
   }
 /* _content/web/Views/OglasiStrojev/Details.cshtml.rz.scp.css */
 .details-container[b-rwnbj8qpz5] {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .car-image[b-rwnbj8qpz5] {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .car-details[b-rwnbj8qpz5] {
-    padding: 20px;
-  }
-
-  .car-title[b-rwnbj8qpz5] {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .car-info[b-rwnbj8qpz5] {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-
-  .car-price[b-rwnbj8qpz5] {
-    font-size: 30px;
-    font-weight: bold;
-    color: #e44d26;
-  }
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.image[b-rwnbj8qpz5] {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.details[b-rwnbj8qpz5] {
+  padding: 20px;
+}
+.title[b-rwnbj8qpz5] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.info[b-rwnbj8qpz5] {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.price[b-rwnbj8qpz5] {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e44d26;
+}
 /* _content/web/Views/OglasiStrojev/Index.cshtml.rz.scp.css */
 a[b-gl9y8rihfs]{
     text-decoration: none;
 }
-
 .filter-dropdown[b-gl9y8rihfs] {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .filter-container[b-gl9y8rihfs] {
   max-width: 600px;
   margin: 20px auto;
@@ -67,18 +60,15 @@ a[b-gl9y8rihfs]{
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .filter-form[b-gl9y8rihfs] {
   padding: 20px;
 }
-
 .filter-input[b-gl9y8rihfs] {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .filter-button[b-gl9y8rihfs] {
   background-color: #e44d26;
   color: #fff;
@@ -87,93 +77,81 @@ a[b-gl9y8rihfs]{
   border-radius: 4px;
   cursor: pointer;
 }
-
-.car-listing[b-gl9y8rihfs] {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox to arrange children */
-    text-decoration: none;
-  }
-
-  .car-image[b-gl9y8rihfs] {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .car-details[b-gl9y8rihfs] {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-  }
-
-  .car-title[b-gl9y8rihfs] {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-info[b-gl9y8rihfs] {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-price[b-gl9y8rihfs] {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e44d26;
-    text-decoration: none;
-  }
+.listing[b-gl9y8rihfs] {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox to arrange children */
+  text-decoration: none;
+}
+.image[b-gl9y8rihfs] {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.car-details[b-gl9y8rihfs] {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+.title[b-gl9y8rihfs] {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.info[b-gl9y8rihfs] {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.price[b-gl9y8rihfs] {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e44d26;
+  text-decoration: none;
+}
 /* _content/web/Views/OglasiZivine/Details.cshtml.rz.scp.css */
 .details-container[b-ryor0qw1gx] {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .car-image[b-ryor0qw1gx] {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .car-details[b-ryor0qw1gx] {
-    padding: 20px;
-  }
-
-  .car-title[b-ryor0qw1gx] {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .car-info[b-ryor0qw1gx] {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-
-  .car-price[b-ryor0qw1gx] {
-    font-size: 30px;
-    font-weight: bold;
-    color: #e44d26;
-  }
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.image[b-ryor0qw1gx] {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+.details[b-ryor0qw1gx] {
+  padding: 20px;
+}
+.title[b-ryor0qw1gx] {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.info[b-ryor0qw1gx] {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.price[b-ryor0qw1gx] {
+  font-size: 30px;
+  font-weight: bold;
+  color: #e44d26;
+}
 /* _content/web/Views/OglasiZivine/Index.cshtml.rz.scp.css */
 a[b-jvwkmuehyh]{
     text-decoration: none;
 }
-
 .filter-container[b-jvwkmuehyh] {
   max-width: 600px;
   margin: 20px auto;
@@ -182,18 +160,15 @@ a[b-jvwkmuehyh]{
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .filter-form[b-jvwkmuehyh] {
   padding: 20px;
 }
-
 .filter-input[b-jvwkmuehyh] {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .filter-button[b-jvwkmuehyh] {
   background-color: #e44d26;
   color: #fff;
@@ -202,49 +177,43 @@ a[b-jvwkmuehyh]{
   border-radius: 4px;
   cursor: pointer;
 }
-
-.car-listing[b-jvwkmuehyh] {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #dadbda;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox to arrange children */
-  }
-
-  .car-image[b-jvwkmuehyh] {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .car-details[b-jvwkmuehyh] {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-  }
-
-  .car-title[b-jvwkmuehyh] {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-info[b-jvwkmuehyh] {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-price[b-jvwkmuehyh] {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e44d26;
-    text-decoration: none;
-  }
+.listing[b-jvwkmuehyh] {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #dadbda;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox to arrange children */
+}
+.image[b-jvwkmuehyh] {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.details[b-jvwkmuehyh] {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+.title[b-jvwkmuehyh] {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.info[b-jvwkmuehyh] {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.price[b-jvwkmuehyh] {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e44d26;
+  text-decoration: none;
+}
 /* _content/web/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

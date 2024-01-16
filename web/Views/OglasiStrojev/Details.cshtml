@@ -5,13 +5,13 @@
 }
 
 <div class="details-container">
-    <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
-    <div class="car-details">
-        <div class="car-title">@Html.DisplayFor(model => model.Title)</div>
-        <div class="car-info">Delovne ure: @Html.DisplayFor(model => model.WorkingHours)</div>
-        <div class="car-info">Letnik: @Html.DisplayFor(model => model.Age)</div>
-        <div class="car-info">Moč [kW]: @Html.DisplayFor(model => model.Power)</div>
-        <div class="car-price">Cena: @Html.DisplayFor(model => model.Price)€</div>
-        <div class="car-info">@Html.DisplayFor(model => model.Desc)</div>
+    <div class="image" style="background-image: url('https://raw.githubusercontent.com/aljaztravnik/kmetzakmeta/main/web/Views/OglasiStrojev/placeholderImg.webp');"></div>
+    <div class="details">
+        <div class="title">@Html.DisplayFor(model => model.Title)</div>
+        <div class="info">Delovne ure: @Html.DisplayFor(model => model.WorkingHours)</div>
+        <div class="info">Letnik: @Html.DisplayFor(model => model.Age)</div>
+        <div class="info">Moč [kW]: @Html.DisplayFor(model => model.Power)</div>
+        <div class="price">Cena: @Html.DisplayFor(model => model.Price)€</div>
+        <div class="info">@Html.DisplayFor(model => model.Desc)</div>
     </div>
 </div>

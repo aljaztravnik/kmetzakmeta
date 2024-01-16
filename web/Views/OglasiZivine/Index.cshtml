@@ -38,13 +38,13 @@
     <tbody>
         @foreach (var item in Model) {
             <a asp-action="Details" asp-route-id="@item.ZivinaOglasID">
-                <div class="car-listing">
-                    <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
-                    <div class="car-details">
-                        <div class="car-title">@Html.DisplayFor(modelItem => item.Title)</div>
-                        <div class="car-info">Starost: @Html.DisplayFor(modelItem => item.Age)</div>
-                        <div class="car-info">Spol: @Html.DisplayFor(modelItem => item.Sex)</div>
-                        <div class="car-price">Cena: @Html.DisplayFor(modelItem => item.Price)€</div>
+                <div class="listing">
+                    <div class="image" style="background-image: url('https://raw.githubusercontent.com/aljaztravnik/kmetzakmeta/main/web/Views/OglasiZivine/placeholderImg.jpg');"></div>
+                    <div class="details">
+                        <div class="title">@Html.DisplayFor(modelItem => item.Title)</div>
+                        <div class="info">Letnica rojstva: @Html.DisplayFor(modelItem => item.Age)</div>
+                        <div class="info">Spol: @Html.DisplayFor(modelItem => item.Sex)</div>
+                        <div class="price">Cena: @Html.DisplayFor(modelItem => item.Price)€</div>
                     </div>
                 </div>
             </a>

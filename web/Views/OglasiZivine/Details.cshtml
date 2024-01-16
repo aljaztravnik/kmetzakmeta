@@ -5,16 +5,15 @@
 }
 
 <div class="details-container">
-    <!--<div class="car-image" style="background-image: url('car-image.jpg');"></div>-->
-    <div class="car-details">
-        <div class="car-title">@Html.DisplayFor(model => model.Title)</div>
-        <div class="car-info">Starost: @Html.DisplayFor(model => model.Age)</div>
-        <div class="car-info">Letnik: @Html.DisplayFor(model => model.Age)</div>
-        <div class="car-info">Teža: @Html.DisplayFor(model => model.Weight)</div>
-        <div class="car-info">Spol: @Html.DisplayFor(model => model.Sex)</div>
-        <div class="car-info">Naraščaj: @Html.DisplayFor(model => model.Offspring)</div>
-        <div class="car-info">Konstrukcija: @Html.DisplayFor(model => model.Construction)</div>
-        <div class="car-price">Cena: @Html.DisplayFor(model => model.Price)€</div>
-        <div class="car-info">@Html.DisplayFor(model => model.Desc)</div>
+    <div class="image" style="background-image: url('https://raw.githubusercontent.com/aljaztravnik/kmetzakmeta/main/web/Views/OglasiZivine/placeholderImg.jpg');"></div>
+    <div class="details">
+        <div class="title">@Html.DisplayFor(model => model.Title)</div>
+        <div class="info">Letnica rojstva: @Html.DisplayFor(model => model.Age)</div>
+        <div class="info">Teža: @Html.DisplayFor(model => model.Weight)</div>
+        <div class="info">Spol: @Html.DisplayFor(model => model.Sex)</div>
+        <div class="info">Naraščaj: @Html.DisplayFor(model => model.Offspring)</div>
+        <div class="info">Konstrukcija: @Html.DisplayFor(model => model.Construction)</div>
+        <div class="price">Cena: @Html.DisplayFor(model => model.Price)€</div>
+        <div class="info">@Html.DisplayFor(model => model.Desc)</div>
     </div>
 </div>

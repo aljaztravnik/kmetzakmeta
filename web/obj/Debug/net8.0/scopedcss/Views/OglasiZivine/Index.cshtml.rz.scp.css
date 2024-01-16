@@ -1,7 +1,6 @@
 a[b-jvwkmuehyh]{
     text-decoration: none;
 }
-
 .filter-container[b-jvwkmuehyh] {
   max-width: 600px;
   margin: 20px auto;
@@ -10,18 +9,15 @@ a[b-jvwkmuehyh]{
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .filter-form[b-jvwkmuehyh] {
   padding: 20px;
 }
-
 .filter-input[b-jvwkmuehyh] {
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
 }
-
 .filter-button[b-jvwkmuehyh] {
   background-color: #e44d26;
   color: #fff;
@@ -30,46 +26,40 @@ a[b-jvwkmuehyh]{
   border-radius: 4px;
   cursor: pointer;
 }
-
-.car-listing[b-jvwkmuehyh] {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #dadbda;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox to arrange children */
-  }
-
-  .car-image[b-jvwkmuehyh] {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .car-details[b-jvwkmuehyh] {
-    flex: 1; /* Take up remaining space */
-    padding: 20px;
-  }
-
-  .car-title[b-jvwkmuehyh] {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-info[b-jvwkmuehyh] {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-    text-decoration: none;
-  }
-
-  .car-price[b-jvwkmuehyh] {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e44d26;
-    text-decoration: none;
-  }
+.listing[b-jvwkmuehyh] {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #dadbda;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox to arrange children */
+}
+.image[b-jvwkmuehyh] {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.details[b-jvwkmuehyh] {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+}
+.title[b-jvwkmuehyh] {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.info[b-jvwkmuehyh] {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.price[b-jvwkmuehyh] {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e44d26;
+  text-decoration: none;
+}
