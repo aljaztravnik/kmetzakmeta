@@ -18,7 +18,7 @@ builder.Services.AddDbContext<KmetContext>(options =>
 
 //builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<KmetContext>();
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128).AddEntityFrameworkStores<KmetContext>().AddDefaultUI().AddDefaultTokenProviders();
-            
+builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Seed database using DbInitializer 
@@ -47,5 +47,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+app.UseSwagger();
+app.UseSwaggerUI(c => {
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Moj API v1");
+});
 
 app.Run();
